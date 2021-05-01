@@ -40,8 +40,8 @@ extension WriteViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let input = data[indexPath.row] as? WriteTextInput {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "textInputCell", for: indexPath) as? WriteTextInputCollectionViewCell else {
-                        fatalError()
-                    }
+                fatalError()
+            }
             cell.inputItem = input
             
             cell.layoutSubviews()
