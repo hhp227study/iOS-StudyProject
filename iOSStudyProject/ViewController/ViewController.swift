@@ -41,9 +41,9 @@ extension ViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "personCell", for: indexPath) as? PersonCollectionViewCell else {
                     fatalError()
                 }
-                cell.personItem = data[indexPath.row]
+        cell.personItem = data[indexPath.row]
                 
-                cell.layoutSubviews()
+        cell.layoutSubviews()
         return cell
     }
 }
