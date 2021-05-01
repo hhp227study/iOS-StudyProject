@@ -18,27 +18,19 @@ class PersonCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
     
-    var personItem: Person? = nil {
-        didSet {
-            print("DEBUG : \(oldValue)")
-        }
-    }
+    var personItem: Person? = nil
     
-//
-//    init() {
-//        super.init()
-//        print("DEBUG : test")
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-    
-    override func awakeFromNib() {
-        print("DEBUG : ")
+    override func layoutSubviews() {
+        super.layoutSubviews()
         if let person = personItem {
             nameLabel.text = person.name
             positionLabel.text = person.position.joined(separator: ", ")
+            emailLabel.text = person.email
+            bioLabel.text = person.bio
+            
+            DispatchQueue.main.async {
+                self.profileImageView.image = try? UIImage(data: Data(contentsOf: person.photo!))
+            }
         }
     }
 }

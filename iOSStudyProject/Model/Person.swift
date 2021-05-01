@@ -12,11 +12,11 @@ struct Person {
     
     let bio: String
     
-    let eMail: String
+    let email: String
     
     let position: [String]
     
     let blog: String
     
-    let photo: UIImage?
+    let photo: URL?
 }

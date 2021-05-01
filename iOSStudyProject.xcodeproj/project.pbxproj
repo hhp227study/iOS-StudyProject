@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A372FEF263BFEB0007F1674 /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A372FEE263BFEB0007F1674 /* PersonCollectionViewCell.swift */; };
-		0A372FF2263C0613007F1674 /* WriteCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A372FF1263C0613007F1674 /* WriteCollectionView.swift */; };
+		0A372FF2263C0613007F1674 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A372FF1263C0613007F1674 /* WriteViewController.swift */; };
 		0A372FF5263C06A3007F1674 /* WriteTextInputCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A372FF4263C06A3007F1674 /* WriteTextInputCollectionViewCell.swift */; };
 		0A372FF8263C0798007F1674 /* WriteTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A372FF7263C0798007F1674 /* WriteTextInput.swift */; };
 		0A40336C2639AE78009A9C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A40336B2639AE78009A9C2E /* AppDelegate.swift */; };
@@ -18,11 +18,14 @@
 		0A4033752639AE79009A9C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A4033742639AE79009A9C2E /* Assets.xcassets */; };
 		0A4033782639AE79009A9C2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4033762639AE79009A9C2E /* LaunchScreen.storyboard */; };
 		0A4033812639B33E009A9C2E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4033802639B33E009A9C2E /* Person.swift */; };
+		0AA7F666263D36DF002F1C40 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7F665263D36DF002F1C40 /* Extension.swift */; };
+		0AA7F669263D396C002F1C40 /* WriteImageInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7F668263D396C002F1C40 /* WriteImageInput.swift */; };
+		0AA7F66C263D3A7B002F1C40 /* WriteImageInputCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7F66B263D3A7B002F1C40 /* WriteImageInputCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A372FEE263BFEB0007F1674 /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
-		0A372FF1263C0613007F1674 /* WriteCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCollectionView.swift; sourceTree = "<group>"; };
+		0A372FF1263C0613007F1674 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		0A372FF4263C06A3007F1674 /* WriteTextInputCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteTextInputCollectionViewCell.swift; sourceTree = "<group>"; };
 		0A372FF7263C0798007F1674 /* WriteTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteTextInput.swift; sourceTree = "<group>"; };
 		0A4033682639AE78009A9C2E /* iOSStudyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSStudyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +37,9 @@
 		0A4033772639AE79009A9C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A4033792639AE79009A9C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A4033802639B33E009A9C2E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		0AA7F665263D36DF002F1C40 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		0AA7F668263D396C002F1C40 /* WriteImageInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteImageInput.swift; sourceTree = "<group>"; };
+		0AA7F66B263D3A7B002F1C40 /* WriteImageInputCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteImageInputCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,20 +72,55 @@
 		0A40336A2639AE78009A9C2E /* iOSStudyProject */ = {
 			isa = PBXGroup;
 			children = (
+				0AA7F664263D36C7002F1C40 /* Utils */,
+				0A6BBD96263D1EEA0053DD5F /* Model */,
+				0A6BBD95263D1EC90053DD5F /* Cell */,
+				0A6BBD93263D1E8A0053DD5F /* ViewController */,
 				0A40336B2639AE78009A9C2E /* AppDelegate.swift */,
 				0A40336D2639AE78009A9C2E /* SceneDelegate.swift */,
-				0A40336F2639AE78009A9C2E /* ViewController.swift */,
 				0A4033712639AE78009A9C2E /* Main.storyboard */,
-				0A372FF4263C06A3007F1674 /* WriteTextInputCollectionViewCell.swift */,
 				0A4033742639AE79009A9C2E /* Assets.xcassets */,
 				0A4033762639AE79009A9C2E /* LaunchScreen.storyboard */,
 				0A4033792639AE79009A9C2E /* Info.plist */,
-				0A4033802639B33E009A9C2E /* Person.swift */,
-				0A372FEE263BFEB0007F1674 /* PersonCollectionViewCell.swift */,
-				0A372FF1263C0613007F1674 /* WriteCollectionView.swift */,
-				0A372FF7263C0798007F1674 /* WriteTextInput.swift */,
 			);
 			path = iOSStudyProject;
+			sourceTree = "<group>";
+		};
+		0A6BBD93263D1E8A0053DD5F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A372FF1263C0613007F1674 /* WriteViewController.swift */,
+				0A40336F2639AE78009A9C2E /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0A6BBD95263D1EC90053DD5F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0A372FF4263C06A3007F1674 /* WriteTextInputCollectionViewCell.swift */,
+				0A372FEE263BFEB0007F1674 /* PersonCollectionViewCell.swift */,
+				0AA7F66B263D3A7B002F1C40 /* WriteImageInputCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0A6BBD96263D1EEA0053DD5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A372FF7263C0798007F1674 /* WriteTextInput.swift */,
+				0A4033802639B33E009A9C2E /* Person.swift */,
+				0AA7F668263D396C002F1C40 /* WriteImageInput.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0AA7F664263D36C7002F1C40 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0AA7F665263D36DF002F1C40 /* Extension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,11 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A372FF2263C0613007F1674 /* WriteCollectionView.swift in Sources */,
+				0AA7F666263D36DF002F1C40 /* Extension.swift in Sources */,
+				0A372FF2263C0613007F1674 /* WriteViewController.swift in Sources */,
 				0A4033702639AE78009A9C2E /* ViewController.swift in Sources */,
 				0A40336C2639AE78009A9C2E /* AppDelegate.swift in Sources */,
 				0A372FF5263C06A3007F1674 /* WriteTextInputCollectionViewCell.swift in Sources */,
 				0A4033812639B33E009A9C2E /* Person.swift in Sources */,
+				0AA7F669263D396C002F1C40 /* WriteImageInput.swift in Sources */,
+				0AA7F66C263D3A7B002F1C40 /* WriteImageInputCollectionViewCell.swift in Sources */,
 				0A40336E2639AE78009A9C2E /* SceneDelegate.swift in Sources */,
 				0A372FEF263BFEB0007F1674 /* PersonCollectionViewCell.swift in Sources */,
 				0A372FF8263C0798007F1674 /* WriteTextInput.swift in Sources */,
