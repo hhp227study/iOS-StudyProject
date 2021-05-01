@@ -19,11 +19,11 @@ class WriteViewController: UIViewController {
     }
     
     private func showAlert(title: String?, message: String? = nil, style: UIAlertController.Style, _ actions: UIAlertAction...) {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
             
-            actions.forEach(alert.addAction)
-            present(alert, animated: true, completion: nil)
-        }
+        actions.forEach(alert.addAction)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 extension WriteViewController: UICollectionViewDelegate {
