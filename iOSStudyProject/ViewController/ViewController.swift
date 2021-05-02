@@ -39,8 +39,8 @@ extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "personCell", for: indexPath) as? PersonCollectionViewCell else {
-                    fatalError()
-                }
+            fatalError()
+        }
         cell.personItem = data[indexPath.row]
                 
         cell.layoutSubviews()
