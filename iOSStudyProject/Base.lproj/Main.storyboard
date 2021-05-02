@@ -21,17 +21,17 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EwU-Uh-uWH">
-                                    <size key="itemSize" width="414" height="180"/>
+                                    <size key="itemSize" width="414" height="136"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="personCell" id="7CR-fc-6tC" customClass="PersonCollectionViewCell" customModule="iOSStudyProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XKI-p0-7sG">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jdu-LR-9FK">
@@ -80,13 +80,14 @@
                                             <constraints>
                                                 <constraint firstItem="XBu-Ft-Idq" firstAttribute="top" secondItem="XKI-p0-7sG" secondAttribute="top" constant="18" id="3QF-B6-c7i"/>
                                                 <constraint firstAttribute="trailing" secondItem="XBu-Ft-Idq" secondAttribute="trailing" constant="18" id="4x0-7r-wVI"/>
+                                                <constraint firstAttribute="bottom" secondItem="XBu-Ft-Idq" secondAttribute="bottom" constant="18" id="Cj6-X6-evD"/>
                                                 <constraint firstItem="jdu-LR-9FK" firstAttribute="top" secondItem="XKI-p0-7sG" secondAttribute="top" constant="18" id="V4i-hE-6Vu"/>
                                                 <constraint firstItem="XBu-Ft-Idq" firstAttribute="leading" secondItem="jdu-LR-9FK" secondAttribute="trailing" constant="18" id="cCc-Co-zQk"/>
                                                 <constraint firstItem="XBu-Ft-Idq" firstAttribute="leading" secondItem="jdu-LR-9FK" secondAttribute="trailing" constant="18" id="g4a-Bg-PVW"/>
                                                 <constraint firstItem="jdu-LR-9FK" firstAttribute="leading" secondItem="XKI-p0-7sG" secondAttribute="leading" constant="18" id="gHn-5c-Lzh"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="414" height="180"/>
+                                        <size key="customSize" width="414" height="136"/>
                                         <connections>
                                             <outlet property="bioLabel" destination="nUu-Pz-Y1Q" id="BPh-Cm-YwK"/>
                                             <outlet property="emailLabel" destination="x6L-zy-BxJ" id="Kdk-fY-dQF"/>
