@@ -18,6 +18,13 @@ class WriteViewController: UIViewController {
         collectionView.dataSource = self
     }
     
+    @IBAction func actionAdd(_ sender: UIBarButtonItem) {
+        if let viewController = navigationController?.children.first as? ViewController {
+            viewController.addData("테스트이름", "테스트바이오", "테스트이메일", ["Android", "iOS"], "테스트블로그", nil)
+        }
+        navigationController?.popViewController(animated: true)
+    }
+    
     private func showAlert(title: String?, message: String? = nil, style: UIAlertController.Style, _ actions: UIAlertAction...) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
             

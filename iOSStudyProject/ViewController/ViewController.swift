@@ -41,6 +41,13 @@ class ViewController: UIViewController {
         collectionView.reloadData()
         refreshControl.endRefreshing()
     }
+    
+    func addData(_ name: String, _ bio: String, _ email: String, _ position: [String], _ blog: String, _ photo: UIImage?) {
+        let newPerson = Person.init(name: name, bio: bio, email: email, position: position, blog: blog, photo: URL(string: "https://cdn.pixabay.com/photo/2020/12/22/12/38/cat-5852139_1280.jpg"))
+        
+        data.insert(newPerson, at: 0)
+        collectionView.reloadData()
+    }
 }
 
 extension ViewController: UICollectionViewDelegate {
