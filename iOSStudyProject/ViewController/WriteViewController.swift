@@ -11,7 +11,7 @@ import MobileCoreServices
 class WriteViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var data: [Any] = [WriteTextInput.init(key: "Name", value: "Name을 입력하세요."), WriteTextInput.init(key: "Email", value: "Email을 입력하세요."), WriteTextInput.init(key: "Position", value: "Position을 입력하세요."), WriteImageInput.init(key: "Image", value: UIImage())]
+    var data: [Any] = [WriteTextInput.init(key: "Name", value: "Name을 입력하세요."), WriteTextInput.init(key: "Email", value: "Email을 입력하세요."), WriteTextInput.init(key: "Position", value: "Position을 입력하세요."),WriteTextInput.init(key: "Bio", value: "Bio를 입력하세요."), WriteImageInput.init(key: "Image", value: UIImage())]
     
     override func viewDidLoad() {
         collectionView.delegate = self
@@ -20,6 +20,8 @@ class WriteViewController: UIViewController {
     
     @IBAction func actionAdd(_ sender: UIBarButtonItem) {
         if let viewController = navigationController?.children.first as? ViewController {
+            let keys = data.map { (($0 as? WriteTextInput) != nil) ? ($0 as! WriteTextInput).key : ($0 as! WriteImageInput).key }
+            print(keys)
             viewController.addData("테스트이름", "테스트바이오", "테스트이메일", ["Android", "iOS"], "테스트블로그", nil)
         }
         navigationController?.popViewController(animated: true)

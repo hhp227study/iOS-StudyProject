@@ -75,6 +75,9 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="296" id="uST-ZR-mlE"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
