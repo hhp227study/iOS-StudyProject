@@ -22,7 +22,12 @@ class WriteViewController: UIViewController {
         if let viewController = navigationController?.children.first as? ViewController {
             let keys = data.map { (($0 as? WriteTextInput) != nil) ? ($0 as! WriteTextInput).key : ($0 as! WriteImageInput).key }
             print(keys)
-            viewController.addData("테스트이름", "테스트바이오", "테스트이메일", ["Android", "iOS"], "테스트블로그", nil)
+            let name = ((collectionView.cellForItem(at: IndexPath(row: 0, section: 0)) as? WriteTextInputCollectionViewCell)?.valueTextView.text)!
+            let email = ((collectionView.cellForItem(at: IndexPath(row: 1, section: 0)) as? WriteTextInputCollectionViewCell)?.valueTextView.text)!
+            let position = ((collectionView.cellForItem(at: IndexPath(row: 2, section: 0)) as? WriteTextInputCollectionViewCell)?.valueTextView.text)!
+            let bio = ((collectionView.cellForItem(at: IndexPath(row: 3, section: 0)) as? WriteTextInputCollectionViewCell)?.valueTextView.text)!
+            
+            viewController.addData(name, bio, email, [position], "테스트블로그", nil)
         }
         navigationController?.popViewController(animated: true)
     }
