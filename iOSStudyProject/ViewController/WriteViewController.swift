@@ -20,12 +20,22 @@ class WriteViewController: UIViewController {
     
     @IBAction func actionAdd(_ sender: UIBarButtonItem) {
         if let viewController = navigationController?.children.first as? ViewController {
-            let keys = data.map { (($0 as? WriteTextInput) != nil) ? ($0 as! WriteTextInput).key : ($0 as! WriteImageInput).key }
-            print(keys)
-            let name = ((collectionView.cellForItem(at: IndexPath(row: 0, section: 0)) as? WriteTextInputCollectionViewCell)?.valueTextView.text)!
-            let email = ((collectionView.cellForItem(at: IndexPath(row: 1, section: 0)) as? WriteTextInputCollectionViewCell)?.valueTextView.text)!
-            let position = ((collectionView.cellForItem(at: IndexPath(row: 2, section: 0)) as? WriteTextInputCollectionViewCell)?.valueTextView.text)!
-            let bio = ((collectionView.cellForItem(at: IndexPath(row: 3, section: 0)) as? WriteTextInputCollectionViewCell)?.valueTextView.text)!
+            guard let name = ((collectionView.cellForItem(at: IndexPath(row: 0, section: 0)) as? WriteTextInputCollectionViewCell)?.valueTextView.text), !name.isEmpty else {
+                showAlert(title: "알림", message: "Name을 입력하세요.", style: .alert, UIAlertAction(title: "확인", style: .default, handler: nil))
+                return
+            }
+            guard let email = ((collectionView.cellForItem(at: IndexPath(row: 1, section: 0)) as? WriteTextInputCollectionViewCell)?.valueTextView.text), validateEmail(email) else {
+                showAlert(title: "알림", message: "올바른 Email형식이 아닙니다.", style: .alert, UIAlertAction(title: "확인", style: .default, handler: nil))
+                return
+            }
+            guard let position = ((collectionView.cellForItem(at: IndexPath(row: 2, section: 0)) as? WriteTextInputCollectionViewCell)?.valueTextView.text), !position.isEmpty else {
+                showAlert(title: "알림", message: "Position을 입력하세요.", style: .alert, UIAlertAction(title: "확인", style: .default, handler: nil))
+                return
+            }
+            guard let bio = ((collectionView.cellForItem(at: IndexPath(row: 3, section: 0)) as? WriteTextInputCollectionViewCell)?.valueTextView.text), !bio.isEmpty else {
+                showAlert(title: "알림", message: "Bio를 입력하세요.", style: .alert, UIAlertAction(title: "확인", style: .default, handler: nil))
+                return
+            }
             
             viewController.addData(name, bio, email, [position], "테스트블로그", nil)
         }
@@ -37,6 +47,12 @@ class WriteViewController: UIViewController {
             
         actions.forEach(alert.addAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func validateEmail(_ email: String) -> Bool {
+        let regEx = "[A-Z0-9a-z._%+]+@[A-Za-z0-9.]+\\.[A-Za-z]{2,4}"
+        let validationStatus = NSPredicate(format: "SELF MATCHES %@", regEx)
+        return validationStatus.evaluate(with: email)
     }
 }
 
